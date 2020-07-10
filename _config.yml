@@ -137,5 +137,6 @@ theme: butterfly
 deploy:
     type: git
     #repository: https://github.com/Babysbreath-x/Babysbreath-x.github.io.git
-    repository: https://gh_token@github.com/Babysbreath-x/Babysbreath-x.github.io.git
-    branch: master
+    #repository: https://gh_token@github.com/Babysbreath-x/Babysbreath-x.github.io.git
+    repository: https://github.com/Babysbreath-x/hexo-theme-butterfly.git
+    branch: gh-page

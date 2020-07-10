@@ -3,37 +3,37 @@ node_js: "10.16.3" #设置语言版本
 
 cache:
     directories:
-        #- node_modules #缓存依赖
+        - node_modules #缓存依赖
 
 # S: Build Lifecycle
 before_install:
   #- npm install -g hexo-cli
 
 install:
-  #- npm install
-  #- npm install hexo-deployer-git --save
+  - npm install
+  - npm install hexo-deployer-git --save
 
 before_script:
-  #- git config user.name "Babysbreath-x"
-  #- git config user.email "490749127@qq.com"
+  - git config user.name "Babysbreath-x"
+  - git config user.email "490749127@qq.com"
 
 script:
-  #- hexo clean
-  #- hexo generate
+  - hexo clean
+  - hexo generate
   #- hexo algolia
-  #- sed -i "s/gh_token/${GH_TOKEN}/g" ./_config.yml
-  #- hexo deploy
+  - sed -i "s/gh_token/${GH_TOKEN}/g" ./_config.yml
+  - hexo deploy
 
 #after_script:
   #- cd ./public
-  - git init
-  - git add .
-  - git commit -m "TravisCI"
+  #- git init
+  #- git add .
+  #- git commit -m "TravisCI"
   #Github Pages
 
   #- git push --force --quiet "https://GH_TOKEN@${GH_REF}" master:master
   #- git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master
+
 env:
   global:
     - GH_REF: github.com/Babysbreath-x/Babysbreath-x.github.io.git
@@ -41,7 +41,7 @@ env:
 # 只有指定的分支提交时才会运行脚本
 branches:
   only:
-    - gh-page
+    - master
   
 notifications:
   email:
