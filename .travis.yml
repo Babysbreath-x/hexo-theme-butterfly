@@ -7,11 +7,12 @@ cache:
 
 # S: Build Lifecycle
 before_install:
+  - npm install -g hexo
   - npm install -g hexo-cli
-
+  - npm install hexo-server
 install:
   - npm install
-  - npm install hexo-deployer-git --save
+  - npm install hexo-deployer-git
 
 before_script:
   - git config user.name "Babysbreath-x"
@@ -20,7 +21,8 @@ before_script:
 script:
   - hexo clean
   - hexo generate
-  #- hexo algolia
+
+after_success:
   - sed -i "s/gh_token/${GH_TOKEN}/g" ./_config.yml
   - hexo deploy
 
