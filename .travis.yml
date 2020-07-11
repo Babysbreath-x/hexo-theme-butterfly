@@ -22,19 +22,19 @@ script:
   - hexo clean
   - hexo generate
 
-after_success:
-  - sed -i "s/gh_token/${GH_TOKEN}/g" ./_config.yml
-  - hexo deploy
+#after_success:
+  #- sed -i "s/gh_token/${GH_TOKEN}/g" ./_config.yml
+  #- hexo deploy
 
 #after_script:
-  #- cd ./public
-  #- git init
-  #- git add .
-  #- git commit -m "TravisCI"
+  - cd ./public
+  - git init
+  - git add .
+  - git commit -m "TravisCI"
   #Github Pages
 
   #- git push --force --quiet "https://GH_TOKEN@${GH_REF}" master:master
-  #- git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
 
 env:
   global:
