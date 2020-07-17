@@ -100,7 +100,7 @@ index_img:
 
 # if the banner of page not setting,it will show the top_img
 #default_top_img: https://i.loli.net/2020/07/08/J1xMWmHrDjTFgPc.jpg
-default_top_img: https://i.loli.net/2020/07/17/15iC9PKLzekQdac.jpg
+default_top_img: https://i.loli.net/2020/07/17/4dLCVGgwe8Uy39S.jpg
 
 # the banner image of archive page
 archive_img: https://i.loli.net/2020/07/17/tNuCPFIl7rQJgWs.jpg
@@ -474,7 +474,7 @@ rightside-bottom:
 # canvas_ribbon (靜止彩帶背景)
 # See: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
-  enable: false
+  enable: true
   size: 150
   alpha: 0.6
   zIndex: -1
@@ -483,8 +483,8 @@ canvas_ribbon:
 
 # Dynamic ribbon (動態彩帶)
 canvas_ribbon_piao:
-  enable: true
-  mobile: true
+  enable: false
+  mobile: false
 
 # canvas_nest
 # https://github.com/hustcc/canvas-nest.js
